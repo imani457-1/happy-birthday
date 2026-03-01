@@ -1,0 +1,93 @@
+/* BODY & BACKGROUND */
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #046307, #0f9d58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px;
+    font-family: Georgia, serif;
+}
+
+/* BOOK CONTAINER */
+.book {
+    width: 400px;
+    height: 550px;
+    position: relative;
+}
+
+/* PAGE STYLING */
+.page {
+    width: 100%;
+    height: 100%;
+    background: #fff8e1;
+    /* cream color */
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform-origin: left;
+    transition: transform 1s ease;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+
+    /* stack pages in order */
+    z-index: calc(1000 - var(--page-index));
+}
+
+/* COVER PAGE */
+.cover {
+    background: #065f46;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.click-hint {
+    margin-top: 30px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* DOODLE IMAGE */
+.page-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* FINAL PAGE & MESSAGE */
+.final-page {
+    text-align: center;
+}
+
+.final-page .message {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.final-page .message p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #00a86b;
+    /* emerald green text */
+}
+
+.final-page .message .birthday-shout {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #00a86b;
+}
